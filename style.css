@@ -7,7 +7,7 @@
 
 .main {
     min-height: 100vh;
-    background: url('images/pexels-pixabay-259698.jpg');
+    background: url('images/pexels-stephan-seeber-1110497.jpg');
     background-size: cover;
 }
 
@@ -18,22 +18,18 @@
     width: 400px;
     border-radius: 20px;
     background: rgba(78, 76, 76, 0.53);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.8px);
+    box-shadow: 200px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
     -webkit-backdrop-filter: blur(7.8px);
-    border: 1px solid rgba(78, 76, 76, 0.83);
 }
 
 .city-display {
     height: 585px;
     width: 400px;
     background: rgba(78, 76, 76, 0.53);
-    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.8px);
     -webkit-backdrop-filter: blur(7.8px);
-    border: 1px solid rgba(78, 76, 76, 0.83);
 }
 
 .main>.container {
@@ -198,6 +194,7 @@
 }
 
 .cities button {
+    font-family: fantasy;
     text-align: left;
     font-size: 30px;
     background: transparent;
@@ -205,6 +202,16 @@
     outline: none;
     color: #ffffff;
     cursor: pointer;
+}
+
+.cities button:hover{
+    font-size: 40px ;
+}
+
+.cities button:focus{
+    font-size: 40px ;
+    color: rgb(34, 75, 136);
+    
 }
 
 .not-found {
