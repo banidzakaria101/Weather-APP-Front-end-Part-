@@ -5,6 +5,7 @@ const weatherdetails = document.querySelector(".weather-details");
 const searchBtn = document.querySelector(".search-box button");
 const searchBox = document.querySelector(".search-box input");
 const image = document.querySelector(".weather-display img");
+const notfound = document.querySelector(".not-found");
 
 const cities = ["Casablanca", "Rabat", "Marrakech", "Tanger"];
 
@@ -13,13 +14,20 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q={
 
 async function citySearch(city) {
   const response = await fetch(apiUrl.replace("{city}", city));
-  const data = await response.json();
 
-  document.querySelector(".city-name").innerHTML = data.name;
-  document.querySelector(".description").innerHTML = data.weather[0].description;
-  document.querySelector(".temperature").innerHTML = data.main.temp + "°C";
-  document.querySelector(".info-humidity span").innerHTML = data.main.humidity + "%";
-  document.querySelector(".info-wind span").innerHTML = data.wind.speed + "km/h";
+  if(response.status == 404){
+    document.querySelector(".weather-display").style.display = "none";
+  document.querySelector(".weather-details").style.display = "none";
+    document.querySelector(".not-found").style.display = "block"
+    
+  }
+  else{
+    const data = await response.json();
+    document.querySelector(".city-name").innerHTML = data.name;
+    document.querySelector(".description").innerHTML = data.weather[0].description;
+    document.querySelector(".temperature").innerHTML = data.main.temp + "°C";
+    document.querySelector(".info-humidity span").innerHTML = data.main.humidity + "%";
+    document.querySelector(".info-wind span").innerHTML = data.wind.speed + "km/h";
 
   if(data.weather[0].main == "Clouds"){
     image.src = "images/clouds.png";
@@ -37,8 +45,12 @@ async function citySearch(city) {
     image.src = "images/haze.png";
   }
 
-
+  document.querySelector(".weather-display").style.display = "block"
+  document.querySelector(".weather-details").style.display = "flex"
+  document.querySelector(".not-found").style.display = "none";
 }
+  }
+  
 
 searchBtn.addEventListener("click", () => {
   citySearch(searchBox.value);

@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <main class="main">
-      <div class="container">
-        <div class="app">
-          <div class="weather-display">
-            <h1 class="city-name">Beni Mellal</h1>
-            <img src="images/clear.png" alt="" />
-            <p class="temperature">80°C</p>
-            <p class="description">Cloudy</p>
-          </div>
-          <div class="weather-details">
-            <div class="humidity">
-                <i class="bx bx-water"></i>
-                <div class="text">
-                    <p>Humidity</p>
-                    <div class="info-humidity">
-                        <span>0%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="wind">
-                <i class="bx bx-wind"></i>
-                <div class="text">
-                    <p>Wind Seep</p>
-                    <div class="info-wind">
-                        <span>0km/h</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="city-display">
-            <div class="search-box">
-                <i class="bx bxs-map" style="font-size: 30px;"></i>
-                <input type="text" placeholder="enter your city" />
-                <button class="bx bx-search"></button>
-            </div>
-            <hr style="height:2px;border-width:0;background-color:gray; ">
-            <div class="cities">
-                <button >Casablanca</button>
-                <button >Rabat</button>
-                <button >Marrakech</button>
-                <button >Tanger</button>
-            </div>
-            <hr style="height:2px;border-width:0;background-color:gray; ">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="app">
+        <div class="weather-display">
+          <h1 class="city-name">Beni Mellal</h1>
+          <img src="images/clear.png" alt="" />
+          <p class="temperature">80°C</p>
+          <p class="description">Cloudy</p>
+        </div>
+        <div class="weather-details">
+          <div class="humidity">
+            <i class="bx bx-water"></i>
+            <div class="text">
+              <p>Humidity</p>
+              <div class="info-humidity">
+                <span>0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="wind">
+            <i class="bx bx-wind"></i>
+            <div class="text">
+              <p>Wind Seep</p>
+              <div class="info-wind">
+                <span>0km/h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="not-found">
+          <p>Oops!!!</p>
+            <img src="images/pngwing.com.png" alt="">
+            <p>seems like you are not on earth!</p>
         </div>
       </div>
-    </main>
-    <script src="script.js"></script>
-  </body>
+      <div class="city-display">
+        <div class="search-box">
+          <i class="bx bxs-map" style="font-size: 30px;"></i>
+          <input type="text" placeholder="enter your city" />
+          <button class="bx bx-search"></button>
+        </div>
+        <hr style="height:2px;border-width:0;background-color:gray; ">
+        <div class="cities">
+          <button>Casablanca</button>
+          <button>Rabat</button>
+          <button>Marrakech</button>
+          <button>Tanger</button>
+        </div>
+        <hr style="height:2px;border-width:0;background-color:gray; ">
+
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>
