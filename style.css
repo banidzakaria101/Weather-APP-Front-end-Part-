@@ -157,12 +157,27 @@
 } */
 
 .cities{
+    width: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: rgba(255, 255, 255, 0.63);
-    font-size: 20px;
     margin-top: 50px;
     margin-bottom: 50px;;
     margin-left: 20px;
 }
+
+.cities button{
+    text-align: left;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+      
+
+
+
